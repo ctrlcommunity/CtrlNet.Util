@@ -24,9 +24,9 @@ There are also some general validation judgments
 ```csharp
 
 // encryption
-Var encryptStr = DESEncrypt. Encrypt (" XXXX ");
+Var encryptStr = DESEncrypt.Encrypt("XXXX");
 // decryption
-Var STR = DESEncrypt. Decrypt (encryptStr);
+Var STR = DESEncrypt.Decrypt(encryptStr);
 
 ```
 
@@ -34,27 +34,27 @@ Var STR = DESEncrypt. Decrypt (encryptStr);
 
 ```csharp
 // encryption
-Var STR = 3 desencrypt. Encrypt (" 123456 ");
+Var str = _3DESEncrypt.Encrypt ("123456");
 // decryption
-3 desencrypt. Decrypt (" STR ");
+_3DESEncrypt.Decrypt(str);
 ```
 
 3. the Http
 
 ```csharp
 // synchronize
-Var STR = HttpMethods. Post (" url ", "jsondata");
-Var STR = HttpMethods. Get (" url ");
+Var str = HttpMethods.Post("url", "jsondata");
+Var str = HttpMethods.Get("url");
 // asynchronous
-Task<HttpResponseMessage> MSG = HttpMethods.PostAsync (" url ", "jsondata");
-Task<HttpResponseMessage> MSG = HttpMethods.GetAsync ("url ");
+Task<HttpResponseMessage> msg = HttpMethods.PostAsync("url ", "jsondata");
+Task<HttpResponseMessage> msg = HttpMethods.GetAsync("url ");
 ```
 
 4. Guid operation
 
 ```csharp
 //Guid operations
-Guid Guid = CombUtil.NewComb ();
+Guid Guid = CombUtil.NewComb();
 DateTime date = CombUtil.GetDateFromComb(guid);
 ```
 
@@ -63,16 +63,16 @@ DateTime date = CombUtil.GetDateFromComb(guid);
 ```csharp
 // binary serialization
 Var binary = new BinarySerializer().Serialize("obj");
-Var obj = new BinarySerializer (.) Deserialize (binary);
+Var obj = new BinarySerializer().Deserialize(binary);
 ```
 
 6. Excel operation
 
 ```csharp
 //export
-ExcelHelper. ExportBytes (new List < object > (), the new string [1]).
+ExcelHelper.ExportBytes(new List<object>(),new string [1]).
 // import
-ExcelHelper. ExcelImport < object > (" filename ");
+ExcelHelper.ExcelImport<object>("filename");
 ```
 
 7. Add object mapping
@@ -85,7 +85,7 @@ MapperExtensions.Map<TDestination>(source);
 //Object creation
 MapperExtensions.Map<TSource,TDestination>(source);
 //merge
-MapperExtensions. Map < TSource, TDestination>(source);
+MapperExtensions.Map<TSource, TDestination>(source);
 ```
 
 
