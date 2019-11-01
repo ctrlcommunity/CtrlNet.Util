@@ -1,5 +1,5 @@
 # CtrlNet.Util
-CtrlNet.Util是一个.net core平台下的应用框架，由常用公共操作类(工具类)、第三方组件封装，第三方业务接口封装等组成。
+CtrlNet.Util is an application framework under.net core platform, which is composed of common operation class (tool class), third-party component encapsulation, third-party business interface encapsulation and so on.
 #
 ### Nuget Packages
 | 包名称                                                         | Nuget稳定版本                                                                                                       | Nuget预览版本                                                                                                          | 下载数                                                                                                               |
@@ -10,70 +10,70 @@ CtrlNet.Util是一个.net core平台下的应用框架，由常用公共操作�
 
 Install-Package CtrlNet.Util
 
-1、目前扩展类包括
-    
-    常规类型转换(String、DateTime、Int、Bool、Decimal、Double)
-    Json序列化和反序列化
-    String验证、判断、中文拼音的转换等
-    还有一些常规的验证判断
-2、Security
+1. The current extended class includes
+Normal type conversions (String, DateTime, Int, Bool, Decimal, Double)
+Json serialization and deserialization
+String verification, judgment, conversion of Chinese pinyin, etc
+There are also some general validation judgments
+2. Security
 
-2.1 DES加密
-```csharp
-//加密
-var encryptStr= DESEncrypt.Encrypt("xxxx");
-//解密
-var str = DESEncrypt.Decrypt(encryptStr);
-```
- 2.2 3DES加密
-```csharp
-//加密
-var str= 3DESEncrypt.Encrypt("123456");
-//解密
-3DESEncrypt.Decrypt("str");
-```
-3、Http
-```csharp
-//同步
-var str= HttpMethods.Post("url", "jsondata");
-var str= HttpMethods.Get("url");
-//异步
-Task<HttpResponseMessage>  msg=HttpMethods.PostAsync("url", "jsondata");
-Task<HttpResponseMessage>  msg=HttpMethods.GetAsync("url");
-```
-4、Guid操作    
-```csharp
-//Guid操作
-Guid  guid= CombUtil.NewComb();
-DateTime date = CombUtil.GetDateFromComb(guid);
-```
-5、二进制序列化
-```csharp
-//二进制序列化
-var binary = new BinarySerializer().Serialize("obj");
-var obj= new BinarySerializer().Deserialize(binary);
-```
-6、Excel操作
-```csharp
-//导出
-ExcelHelper.ExportBytes(new List<object>(),new string[1]);
-//导入
-ExcelHelper.ExcelImport<object>("filename");
-```
-7、增加对象映射
-//深度拷贝
-```csharp 
-MapperExtensions.Clone<Test>(test1);
-```
-//对象创建
-```csharp 
-MapperExtensions.Map<TDestination>(source);
-```
-对象创建
-```csharp 
-MapperExtensions.Map<TSource,TDestination>(source);
-```
-合并
-```csharp 
-MapperExtensions.Map<TSource,TDestination>(source);
-```
+2.1 the DES encryption
+` ` ` csharp
+/ / encryption
+Var encryptStr = DESEncrypt. Encrypt (" XXXX ");
+/ / decryption
+Var STR = DESEncrypt. Decrypt (encryptStr);
+` ` `
+2.2 3 des encryption
+` ` ` csharp
+/ / encryption
+Var STR = 3 desencrypt. Encrypt (" 123456 ");
+/ / decryption
+3 desencrypt. Decrypt (" STR ");
+` ` `
+3, the Http
+` ` ` csharp
+/ / synchronize
+Var STR = HttpMethods. Post (" url ", "jsondata");
+Var STR = HttpMethods. Get (" url ");
+/ / asynchronous
+Task < HttpResponseMessage > MSG = HttpMethods. PostAsync (" url ", "jsondata");
+Task < HttpResponseMessage > MSG = HttpMethods. GetAsync (" url ");
+` ` `
+4. Guid operation
+` ` ` csharp
+/ / Guid operations
+Guid Guid = CombUtil. NewComb ();
+DateTime date = CombUtil. GetDateFromComb (guid);
+` ` `
+5. Binary serialization
+` ` ` csharp
+// binary serialization
+Var binary = new BinarySerializer().Serialize("obj");
+Var obj = new BinarySerializer (.) Deserialize (binary);
+` ` `
+6. Excel operation
+` ` ` csharp
+/ / export
+ExcelHelper. ExportBytes (new List < object > (), the new string [1]).
+/ / import
+ExcelHelper. ExcelImport < object > (" filename ");
+` ` `
+7. Add object mapping
+// deep copy
+` ` ` csharp
+MapperExtensions. Clone < Test > (test1);
+` ` `
+// object creation
+` ` ` csharp
+MapperExtensions. Map < TDestination > (source);
+` ` `
+Object creation
+` ` ` csharp
+MapperExtensions. Map < TSource, TDestination > (source);
+` ` `
+merge
+` ` ` csharp
+MapperExtensions. Map < TSource, TDestination > (source);
+` ` `
+There are also some general validation judgments
